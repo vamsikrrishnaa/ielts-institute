@@ -1,0 +1,59 @@
+/* Custom Swiper Styles */
+.testimonial-swiper {
+  padding-bottom: 60px !important;
+}
+
+.testimonial-swiper .swiper-pagination {
+  bottom: 20px !important;
+}
+
+.testimonial-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.testimonial-swiper .swiper-pagination-bullet-active {
+  width: 30px;
+  border-radius: 5px;
+  opacity: 1;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+.swiper-slide > div {
+  height: 100%;
+}
+
+/* 3D effect for mobile carousel */
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+}
+
+/* Custom navigation buttons */
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.swiper-button-prev-custom:hover,
+.swiper-button-next-custom:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Line clamp utility for text truncation */
+.line-clamp-4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
