@@ -63,16 +63,15 @@ const HeroEnhanced: React.FC = () => {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] md:bg-[size:100px_100px]"></div>
       </div>
 
-      {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           
           {/* Left Content */}
           <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center lg:text-left space-y-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative z-10 max-w-4xl mx-auto lg:mx-0 lg:text-left space-y-6"
           >
             {/* Badge */}
             <motion.div
@@ -89,7 +88,7 @@ const HeroEnhanced: React.FC = () => {
             </motion.div>
 
             {/* Main Heading */}
-            <div className="space-y-2">
+            <div className="space-y-3 sm:space-y-4">
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -102,7 +101,7 @@ const HeroEnhanced: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
-                className="h-[1.2em] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold"
+                className="min-h-[1.4em] sm:min-h-[1.5em] md:min-h-[1.6em] lg:min-h-[1.7em] xl:min-h-[1.8em] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold"
               >
                 <motion.span
                   key={textIndex}
@@ -110,7 +109,7 @@ const HeroEnhanced: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5 }}
-                  className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                  className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent inline-block"
                 >
                   {rotatingTexts[textIndex]}
                 </motion.span>
@@ -122,7 +121,7 @@ const HeroEnhanced: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7, duration: 0.6 }}
-              className="text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0"
+              className="text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0 mt-4 sm:mt-6"
             >
               Join 15,000+ successful students. Master IELTS with AI-powered learning, 
               expert instructors, and guaranteed results.
@@ -133,7 +132,7 @@ const HeroEnhanced: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.6 }}
-              className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start"
+              className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start mt-4 sm:mt-6"
             >
               <div className="flex items-center gap-1.5 bg-blue-500/20 px-3 py-1.5 rounded-full">
                 <Icons.FaBookReader className="text-blue-400 text-xs" />
@@ -154,7 +153,7 @@ const HeroEnhanced: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9, duration: 0.6 }}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mt-6 sm:mt-8"
             >
               <button className="group relative px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold text-sm sm:text-base overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30">
                 <span className="relative z-10 flex items-center justify-center gap-2">
@@ -175,7 +174,7 @@ const HeroEnhanced: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.1, duration: 0.6 }}
-              className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 max-w-md mx-auto lg:mx-0 pt-6"
+              className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 max-w-md mx-auto lg:mx-0 pt-8 sm:pt-10"
             >
               <div className="text-center lg:text-left">
                 <div className="flex items-center justify-center lg:justify-start gap-1 mb-1">
@@ -208,7 +207,7 @@ const HeroEnhanced: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative hidden lg:block"
           >
-            <motion.div animate={floatingAnimation} className="relative">
+            <motion.div animate={floatingAnimation} className="relative z-10">
               {/* Main Dashboard Card */}
               <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-6 xl:p-8 border border-white/20 shadow-2xl">
                 {/* Dashboard Header */}
@@ -321,7 +320,7 @@ const HeroEnhanced: React.FC = () => {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="absolute -top-4 -right-4 bg-gradient-to-br from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full shadow-lg"
+                className="absolute -top-6 -right-6 bg-gradient-to-br from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full shadow-lg z-20"
               >
                 <div className="flex items-center gap-2">
                   <Icons.FaStar className="text-yellow-300" />
@@ -340,7 +339,7 @@ const HeroEnhanced: React.FC = () => {
                   ease: "easeInOut",
                   delay: 1
                 }}
-                className="absolute -bottom-4 -left-4 bg-gradient-to-br from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full shadow-lg"
+                className="absolute -bottom-6 -left-6 bg-gradient-to-br from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full shadow-lg z-20"
               >
                 <div className="flex items-center gap-2">
                   <Icons.FaTrophy className="text-yellow-300" />
